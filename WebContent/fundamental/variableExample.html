@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 기본 데이터타입
+	// number 타입
+	var age = 50;
+	var weight = 78.5;
+	console.log(age);
+	console.log(weight);
+	
+	// string 타입
+	var test = "\"자바스크립트 언어 \n 어렵지 않아요..\"";
+	console.log(test);
+	
+	// boolean 타입
+	var flag = true;
+	console.log(flag);
+	
+	// 레퍼런스타입
+	var message = new String("문자열 객체입니다..");
+	console.log(message);
+	console.log(message.charAt(4));
+	
+	var xxx = null;
+	var yyy = undefined;
+	console.log(xxx);
+	console.log(yyy);
+	
+	console.log(null == undefined);		// 값 자체만 비교
+	console.log(null === undefined);	// 값과 데이터타입 비교
+	
+	console.log("이대용" == new String("이대용"));
+	console.log("이대용" === new String("이대용"));
+	
+	var message = "쉬었다 합시다..";
+	console.log(typeof message);
+	var ch = message.indexOf('합'); // auto boxing
+	console.log(typeof message);
+	console.log(ch);
+	
+	var x = 10;
+	console.log(x.toString().length);
+	
+	var flag = false;
+	console.log(flag.toString().length);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 묵시적 생성</title>
+<script type="text/javascript">
+	var student = {
+		name : '이대용',
+		hobby : '게임',
+		profile : '프로그래머입니다.',
+		toString : function(){
+			//return this.name + ", " + this.hobby + ", " + this.profile;
+			var str = "";
+			for (var prop in this) {
+				if (prop != 'toString') {
+					str += prop + "\t" + this[prop]+ "\n";
+				}
+			}
+			
+			return str;
+		}
+	};
+</script>
+</head>
+<body>
+<script type="text/javascript">
+
+	document.write("이름: " + student.name + "<br>");
+	document.write("취미: " + student.hobby + "<br>");
+	document.write("프로필: " + student['profile'] + "<br>");
+	
+	console.log(student.toString());
+	
+	student.ssn = 12345;
+	student.study = function () {
+		console.log('공부합니다..');
+	};
+	
+	console.log(student.toString());
+	student.study();
+</script>
+</body>
+</html>

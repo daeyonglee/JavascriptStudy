@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+var message = new String("테스트입니다.");
+console.log("length" in message);
+console.log("indexOf" in message);
+console.log("chatAt" in message);
+console.log("xxx" in message);
+
+// int[] array = {1,2,3,4,5};
+var array = [1, 2, 3, 4, 5];
+console.log(3 in array);
+
+var today = new Date();
+console.log(today);
+console.log(today.toString());
+
+console.log(today instanceof Date);
+console.log(today instanceof Object);
+
+console.log(typeof "이대용");
+console.log(typeof 28);
+console.log(typeof true);
+
+console.log(new String("이대용"));
+console.log(new Date());
+console.log(new Number());
+
+var str = new String("이대용");
+console.log(delete str.__proto__.anchor);
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var score = 0;
+	score = prompt('성적을 입력하세요.', 0);
+	
+	var message = "";
+	
+	switch (parseInt(score)/10) {
+		case 10:
+		case 9:
+			message = '수';
+			break;
+		case 8:
+			message = '우';
+			break;
+		case 7:
+			message = '미';
+			break;
+		case 6:
+			message = '양';
+			break;
+		default:
+			message = '가';
+			break;
+	};
+	
+	document.write(message);
+	
+</script>
+<body>
+</body>
+</html>

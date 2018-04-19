@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM 이해</title>
+<style type="text/css">
+div {
+	position: absolute;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-o-border-radius:10px;
+}
+
+#sun {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background-color: red;
+}
+#earth {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	background-color: gold;
+}
+#moon {
+	width: 10px;
+	height: 10px;
+	background-color: gray;
+}
+</style>
+</head>
+<body>
+<div id="sun">S</div>
+<div id="earth"><img src="../images/icons4667.png"></div>
+<div id="moon"></div>
+
+<script type="text/javascript">
+	var sun = document.getElementById("sun");
+	var earth = document.getElementById("earth");
+	var moon = document.getElementById("moon");
+	
+	sun.style.left = 250 + "px";
+	sun.style.top = 200 + "px";
+	
+	var earthAngle = 0;
+	var moonAngle = 0;
+	
+	setInterval(function(){
+		// 지구와 달의 좌표값 구하기
+		var earthX = 250 + 150 * Math.cos(earthAngle);
+		var earthY = 200 + 150 * Math.sin(earthAngle);
+		
+		var moonX = earthX + 50 * Math.cos(moonAngle);
+		var moonY = earthY + 50 * Math.sin(moonAngle);
+		
+		// 위치 이동
+		earth.style.left = earthX + "px";
+		earth.style.top = earthY + "px";
+		moon.style.left = moonX + "px";
+		moon.style.top = moonY + "px";
+		
+		// 각도 증가
+		earthAngle += 0.1;
+		moonAngle += 0.3;
+		
+	}, 1000/10);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

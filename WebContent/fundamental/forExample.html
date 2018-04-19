@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table, table td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-spacing: 1em;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>구구단 출력</h1>
+<script type="text/javascript">
+	document.write("<table>");
+	for (var i=2; i<=9; i++) {
+		document.write("<tr>");
+		for (var j=1; j<=9; j++) {
+			document.write("<td>");
+			document.write(i + "*" + j + "=" + i*j);
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+</body>
+</html>

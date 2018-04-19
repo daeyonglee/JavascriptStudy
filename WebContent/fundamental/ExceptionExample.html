@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var message = null;
+	try {
+		//message.charAt(5);
+		//console.log(10 / 0);
+		var array = [10, 20, 30];
+		console.log(array[3]);
+	} catch(e) {
+		console.log(e.toString());
+	}
+	try {
+  	if ("예외발생"){
+  		throw new Error("동전이 부족합니다..");
+  	}
+	} catch(e){
+		console.log(e.toString());
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

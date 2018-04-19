@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 일상생활의 객체(학생)을 표현하기 위한 생성자(객체)
+function Student(ssn, name, korean, math, english, science) {
+	this.ssn = ssn;
+	this.name = name;
+	this.korean = korean;
+	this.math = math;
+	this.english = english;
+	this.science = science;
+	
+	this.getSum = function(){
+		return this.korean + this.math + this.english + this.science;
+	};
+	
+	this.getAverage = function(){
+		return this.getSum()/4;
+	};
+	
+	this.toString = function(){
+		return "ssn: " + this.ssn + "\t" + "name: " + this.name + "\t" + "Sum: " + this.getSum() + "\t" + "Average: " + this.getAverage() + "\n";
+	};
+}
+
+// 공유속성
+Student.schoolName = 'KOSTA대학';
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	var s = new Student(1234, '이대용', 50, 60, 70, 80);
+	document.write(s.toString());
+	document.write(Student.schoolName);
+	var student2 = student;
+	console.log(student2.getSum());
+	
+	console.log(student instanceof Student);
+	console.log(student instanceof String);
+	console.log(student instanceof Boolean);
+	console.log(student instanceof Number);
+</script>
+</body>
+</html>

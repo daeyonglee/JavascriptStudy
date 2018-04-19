@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sum(x, y) {
+		return x + y;
+	}
+	
+	var c = sum(1, 2);
+	
+	document.write(c);
+	document.write("<hr>");
+	
+	var b = function (){
+		return "나는 익명함수 입니다.";
+	};
+	
+	document.write(b());
+	
+	// 동적 함수 정의
+	var dynamicSum = new Function("x","y","return x + y");
+	
+	function hypotenuse(a, b){
+		// 중첩 함수
+		function sqaure(x) {
+			return x*x;
+		}
+		
+		return Math.sqrt(sqaure(a)+sqaure(b));
+	}
+	
+	console.log(hypotenuse(10, 20));
+	
+	function sum(){
+		return function(){
+			
+		}
+	}
+	
+	
+</script>
+</head>
+<body>
+<script>
+document.write(dynamicSum.prototype)
+</script>
+</body>
+</html>

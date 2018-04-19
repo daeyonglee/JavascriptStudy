@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript 처음 작성</title>
+<style>
+  h2 {
+    font-size: 30pt;
+    color: red;
+  }
+  
+  p {
+    font-size: 20pt;
+    color: blue;
+  }
+ 
+</style>
+<script type="text/javascript" src="./js/common.jsp"></script>
+</head>
+<body>
+  <h2>JavaScript가 뭐예요?</h2>
+  <p>동적인 웹 페이지 작성을 위해 HTML 문서 내에 코드를 삽입하여 사용하는대표적인 Scripting Language이다.</p>
+  <a href="JavaScript:alert('살랑살랑');">네이버</a>
+  <input type="button" value="클릭해봐" onclick="confirm('정말로')">
+  
+  <script type="text/javascript">
+  
+  	var message = '오늘 수업 끝입니다.<br>';
+  	
+  	document.write(message);
+  	
+  	message = 100005;
+  	document.write(message + 2000 + '<br>');
+
+  </script>
+  <script>
+  	document.write('5 + 7 = ' + sum(5, 7));
+  </script>
+</body>
+</html>

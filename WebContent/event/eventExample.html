@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리하기</title>
+<style>
+  #click {
+    background-color: yellow;
+    width: 200px;
+    height: 50px;
+    border: 1px solid blue;
+  }
+</style>
+<script type="text/javascript">
+	window.addEventListener("load", function(e) {
+		eventRegister();
+	}, false);
+	
+	function eventRegister() {
+		// 고전 이벤트 처리하기
+	  var eventSource = document.getElementById("button");
+	  eventSource.onclick = function(){
+		  document.body.style.backgroundColor = "blue";
+	  }
+	  
+	  // 표준 이벤트 처리하기
+	  var eventSource = document.getElementById("button2");
+	  eventSource.addEventListener("dblclick", function(e) {
+		  var x = e.pageX;
+		  var y = e.pageY;
+		  alert(x + ", " + y);
+	  }, false)
+	}
+</script>
+</head>
+<body>
+  <div id="click" ondblclick="alert('밥먹고합시다')">클릭하세요</div>
+  
+  <div id="button">클릭하세요</div>
+  <div id="button2">클릭하세요</div>
+</body>
+</html>
